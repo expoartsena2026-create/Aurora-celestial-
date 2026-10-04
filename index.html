@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Aurora Celestial — lámparas artesanales y personalizadas. Donde la luz nace de la imaginación.">
+<meta name="theme-color" content="#7569a8">
+<title>Aurora Celestial | Donde la luz nace de la imaginación</title>
+<style>
+:root{--p:#7569a8;--pd:#4b4180;--bg:#faf8f3;--tx:#2d2a3e;--ac:#e8b84f}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,sans-serif;background:var(--bg);color:var(--tx);line-height:1.6}
+h1,h2,h3{font-family:Georgia,serif;font-weight:600;line-height:1.2}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.w{max-width:1050px;margin:auto;padding:0 20px}
+section{padding:56px 0}
+.k{color:var(--p);letter-spacing:.12em;text-transform:uppercase;font-size:.78rem;font-weight:700;margin-bottom:8px}
+h2{font-size:clamp(1.6rem,4vw,2.3rem);margin-bottom:14px}
+.btn{display:inline-block;background:var(--p);color:#fff;padding:12px 24px;border-radius:30px;font-weight:600;border:0;cursor:pointer;font-size:1rem}
+.btn.o{background:none;border:2px solid var(--p);color:var(--p)}
+header{position:sticky;top:0;background:#fffc;backdrop-filter:blur(8px);z-index:20;border-bottom:1px solid #0001}
+header .w{display:flex;align-items:center;justify-content:space-between;height:60px}
+.lg{display:flex;align-items:center;gap:8px;font-family:Georgia,serif;font-weight:700;color:var(--pd)}
+.lg img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+nav{display:flex;gap:16px;font-size:.88rem}
+nav a:hover{color:var(--p)}
+#mb{display:none;background:none;border:0;font-size:1.6rem}
+.hero{background:linear-gradient(160deg,#efeaf9,#fdf3dc);padding:48px 0}
+.hero .w{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(2rem,6vw,3.4rem);margin:10px 0 14px}
+.hero h1 em{color:var(--p)}
+.hero img{border-radius:24px;box-shadow:0 20px 40px #4b41802e;aspect-ratio:3/4;object-fit:cover}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
+.box{background:#fff;border-radius:16px;padding:18px;box-shadow:0 4px 14px #0000000d}
+.box b{color:var(--pd)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:24px}
+.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 20px #0000000f;display:flex;flex-direction:column}
+.card>img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.card .b{padding:18px;display:flex;flex-direction:column;gap:6px;flex:1}
+.tag{font-size:.72rem;color:var(--p);font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.pr{font-size:1.4rem;font-weight:700;color:var(--pd)}
+.new{border:2px solid var(--ac)}
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
+.trio img{aspect-ratio:3/4;object-fit:cover;width:100%;cursor:zoom-in}
+.card .b a.btn{margin-top:auto;text-align:center;padding:10px}
+.dark{background:var(--pd);color:#fff;text-align:center}
+.dark .k{color:var(--ac)}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:22px;text-align:left}
+.steps div{background:#ffffff14;border-radius:14px;padding:16px}
+.steps span{color:var(--ac);font-weight:700}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:20px}
+.gal img{border-radius:14px;aspect-ratio:1;object-fit:cover;width:100%;cursor:zoom-in}
+details{background:#fff;border-radius:12px;padding:14px 18px;margin-top:10px;box-shadow:0 2px 8px #0000000a}
+summary{font-weight:600;cursor:pointer}
+details p{margin-top:8px;color:#555}
+form{display:grid;gap:12px;max-width:560px;margin-top:20px}
+input,select,textarea{padding:12px;border:1px solid #cfc9e6;border-radius:10px;font:inherit;width:100%}
+label{font-weight:600;font-size:.9rem}
+.pay{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+.pay span{background:#fff;padding:10px 20px;border-radius:30px;font-weight:600;box-shadow:0 2px 8px #0000000d}
+footer{background:#2d2a3e;color:#ddd;text-align:center;padding:36px 20px;font-size:.88rem}
+footer img{height:70px;margin:0 auto 10px;border-radius:10px}
+.md{position:fixed;inset:0;background:#000b;display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+.md.on{display:flex}
+.md img{max-height:90vh;border-radius:12px}
+.pop .bx{background:#fff;border-radius:20px;padding:28px;max-width:400px;position:relative;text-align:center}
+.pop .x{position:absolute;top:10px;right:14px;background:none;border:0;font-size:1.5rem;cursor:pointer}
+.code{font-size:1.7rem;font-weight:800;color:var(--p);letter-spacing:.1em;margin:10px 0}
+#ofr{position:fixed;bottom:16px;left:16px;background:var(--ac);color:#2d2a3e;padding:10px 16px;border-radius:30px;font-weight:700;font-size:.85rem;border:0;cursor:pointer;z-index:15;box-shadow:0 4px 12px #0003}
+@media(max-width:760px){
+nav{display:none;position:absolute;top:60px;left:0;right:0;background:#fff;flex-direction:column;padding:16px 20px;gap:12px}
+nav.on{display:flex}
+#mb{display:block}
+.hero .w{grid-template-columns:1fr}
+header .btn{display:none}
+}
+</style>
+</head>
+<body>
+
+<header><div class="w">
+<a class="lg" href="#inicio"><img src="logo-icon.jpg" alt="Aurora Celestial"> Aurora Celestial</a>
+<nav id="nv">
+<a href="#coleccion">Colección</a><a href="#personaliza">Personaliza</a><a href="#proceso">Proceso</a><a href="#galeria">Galería</a><a href="#historia">Nosotros</a><a href="#faq">FAQ</a><a href="#pedido">Pedido</a>
+</nav>
+<a class="btn" href="#pedido">Crear mi lámpara</a>
+<button id="mb" aria-label="Menú">☰</button>
+</div></header>
+
+<main id="inicio">
+<div class="hero"><div class="w">
+<div>
+<p class="k">Lámparas artesanales personalizadas</p>
+<h1>Donde la luz nace de la <em>imaginación.</em></h1>
+<p>Creamos piezas hechas a mano que combinan luz, color y creatividad para convertir una idea personal en una lámpara única.</p>
+<p style="margin-top:20px;display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="#coleccion">Explorar colección</a><a class="btn o" href="#personaliza">Crear mi lámpara</a></p>
+<p style="margin-top:16px;color:var(--pd)">✦ <b>Diseñada por ti.</b> Creada a mano. Iluminada para ti.</p>
+</div>
+<img src="lampara-loto-blanco.jpg" alt="Lámpara artesanal de loto blanco iluminada">
+</div></div>
+
+<section><div class="w">
+<p class="k">La idea</p>
+<h2>Más que una lámpara, una idea hecha luz.</h2>
+<p>Aurora Celestial nace para crear iluminación que también tenga personalidad. Cada pieza busca aportar color, creatividad y un toque especial a los espacios, adaptándose a los gustos y necesidades de quien la imagina.</p>
+<div class="g4">
+<div class="box"><b>Creativa</b><br>Formas, colores y temáticas que pueden cambiar según tu idea.</div>
+<div class="box"><b>Artesanal</b><br>Cada pieza se trabaja con cuidado y atención al detalle.</div>
+<div class="box"><b>Personal</b><br>Una lámpara puede representar un gusto, un recuerdo o una afición.</div>
+<div class="box"><b>Accesible</b><br>Buscamos ofrecer una alternativa decorativa y económica.</div>
+</div>
+</div></section>
+
+<section id="coleccion" style="background:#fff7"><div class="w">
+<p class="k">Colección</p>
+<h2>Encuentra una luz que sea muy tú.</h2>
+<p>Explora algunos estilos e inspírate. Si ya tienes una idea diferente, también podemos partir desde cero.</p>
+
+<div class="cards">
+<div class="card new">
+<div class="trio">
+<img src="lampara-mediana-roja.jpg" alt="Lámpara básica mediana flor roja">
+<img src="lampara-mediana-loto-mariposas.jpg" alt="Lámpara básica mediana loto blanco con mariposas">
+<img src="lampara-mediana-campanula.jpg" alt="Lámpara básica mediana campánula verde">
+</div>
+<div class="b">
+<span class="tag">Nuevo · Básica</span>
+<h3>Lámpara básica mediana</h3>
+<p>Tamaño mediano en diseños florales como la flor roja, el loto con mariposas y la campánula verde.</p>
+<p class="pr">$35.000</p>
+<a class="btn" href="#pedido" data-l="Lámpara básica mediana ($35.000)">Pedir esta lámpara</a>
+</div>
+</div>
+
+<div class="card new">
+<img src="lampara-personalizada-stand.jpg" alt="Lámparas básicas personalizadas de Aurora Celestial">
+<div class="b">
+<span class="tag">Nuevo · Personalizable</span>
+<h3>Lámpara básica personalizada</h3>
+<p>Elige colores, flor e inspiración. La hacemos a tu gusto, con tu idea como punto de partida.</p>
+<p class="pr">$50.000</p>
+<a class="btn" href="#pedido" data-l="Lámpara básica personalizada ($50.000)">Personalizar la mía</a>
+</div>
+</div>
+
+<div class="card">
+<img src="lampara-campanita-verde.jpg" alt="Lámpara artesanal campánula verde">
+<div class="b"><span class="tag">Artesanal</span><h3>Flor Aurora</h3><p>Una pieza floral iluminada, suave y decorativa.</p><p class="pr">$45.000 – $60.000</p><a class="btn o" href="#personaliza">Ver idea</a></div>
+</div>
+
+<div class="card">
+<img src="lampara-medusa.jpg" alt="Lámpara artesanal medusa en tonos azules">
+<div class="b"><span class="tag">Inspiración</span><h3>Flor Celestial</h3><p>Una composición en tonos azules para espacios tranquilos y especiales.</p><p class="pr">$45.000 – $60.000</p><a class="btn o" href="#personaliza">Ver idea</a></div>
+</div>
+
+<div class="card">
+<img src="lampara-flor-roja.jpg" alt="Lámpara artesanal floral roja personalizada">
+<div class="b"><span class="tag">Personalizable</span><h3>Tu propia flor</h3><p>Elige colores, inspiración y estilo. Nosotros nos encargamos de convertirlo en luz.</p><p class="pr">$50.000 – $70.000</p><a class="btn o" href="#personaliza">Crear</a></div>
+</div>
+</div>
+</div></section>
+
+<section id="personaliza" class="dark"><div class="w">
+<p class="k">Personalización</p>
+<h2>¿Puedes imaginarlo? + Nosotros podemos convertirlo en luz.</h2>
+<p>Una flor, un animal, un personaje, un símbolo, un color, un hobby o simplemente una idea. Tu imaginación es el punto de partida.</p>
+<div class="steps">
+<div><span>01</span><h3>Imagina</h3>Piensa en la forma, temática o estilo que quieres.</div>
+<div><span>02</span><h3>Cuéntanos</h3>Comparte tu idea, fotografía, dibujo o referencia.</div>
+<div><span>03</span><h3>Creamos</h3>Trabajamos la pieza artesanal según lo acordado.</div>
+<div><span>04</span><h3>Iluminamos</h3>Tu idea cobra vida y se convierte en una pieza única.</div>
+</div>
+<p style="margin-top:24px"><a class="btn" style="background:var(--ac);color:#2d2a3e" href="#pedido">Quiero crear mi lámpara</a></p>
+</div></section>
+
+<section id="proceso"><div class="w">
+<p class="k">Cómo funciona</p>
+<h2>Una idea puede comenzar con una simple conversación.</h2>
+<div class="g4">
+<div class="box"><b>01 · Cuéntanos</b><br>Escríbenos y cuéntanos qué tienes en mente.</div>
+<div class="box"><b>02 · Definimos</b><br>Conversamos sobre colores, forma, tamaño y nivel de detalle.</div>
+<div class="box"><b>03 · Elaboramos</b><br>Convertimos la idea en una pieza artesanal cuidando cada detalle.</div>
+<div class="box"><b>04 · Entregamos</b><br>Coordinamos contigo la entrega y los últimos detalles del pedido.</div>
+</div>
+<div class="gal" style="margin-top:28px">
+<img src="lampara-conejo-mariposa.jpg" alt="Detalle artesanal de lámparas hechas a mano">
+<img src="lampara-loto-rosa.jpg" alt="Lámpara artesanal floral rosa iluminada">
+</div>
+<h2 style="margin-top:28px">Hecho a mano. Hecho con intención.</h2>
+<p>Cada lámpara combina materiales sencillos con creatividad y trabajo manual. La textura, los colores y la forma se convierten en parte de la personalidad de cada creación.</p>
+<p style="margin-top:12px;font-style:italic;color:var(--pd)">"Los productos no solo iluminan espacios; también pueden aportar estilo, creatividad y valor emocional."</p>
+</div></section>
+
+<section id="galeria" style="background:#fff7"><div class="w">
+<p class="k">Galería</p>
+<h2>Deja que la imaginación se encienda.</h2>
+<p>Estas son algunas creaciones e ideas que muestran hasta dónde puede llegar una lámpara cuando se trabaja desde la imaginación.</p>
+<div class="gal">
+<img src="lampara-loto-rosa.jpg" alt="Luz floral">
+<img src="lampara-loto-blanco.jpg" alt="Color y luz">
+<img src="lampara-medusa.jpg" alt="Celestial">
+<img src="lampara-flor-roja.jpg" alt="Creación personalizada">
+<img src="lampara-mediana-roja.jpg" alt="Flor roja mediana">
+<img src="lampara-mediana-loto-mariposas.jpg" alt="Loto con mariposas">
+<img src="lampara-mediana-campanula.jpg" alt="Campánula verde">
+<img src="lampara-personalizada-stand.jpg" alt="Lámparas personalizadas">
+</div>
+</div></section>
+
+<section id="historia"><div class="w">
+<p class="k">Aurora Celestial</p>
+<h2>Toda luz tiene una historia.</h2>
+<p>Aurora Celestial nació el 11 de marzo de 2026 a partir de una necesidad cercana: crear una iluminación accesible, creativa y diferente.</p>
+<h3 style="margin:18px 0 8px">Una idea que busca iluminar mucho más que un espacio.</h3>
+<p>El proyecto evolucionó desde la idea de iluminar hacia la posibilidad de crear piezas que también expresen gustos, recuerdos, hobbies y personalidad.</p>
+<p style="margin-top:10px">El nombre Aurora Celestial representa para el proyecto una idea de luz, esperanza y recuerdo. Por eso, cada creación busca tener algo más que una función: busca transmitir una sensación.</p>
+<div class="g4">
+<div class="box"><b>Responsabilidad</b><br>Cumplir lo que prometemos.</div>
+<div class="box"><b>Compromiso</b><br>Dar lo mejor en cada producto.</div>
+<div class="box"><b>Empatía</b><br>Entender lo que necesita cada cliente.</div>
+</div>
+</div></section>
+
+<section id="faq" style="background:#fff7"><div class="w">
+<p class="k">Preguntas frecuentes</p>
+<h2>Antes de pedir, probablemente quieras saber esto.</h2>
+<details><summary>¿Puedo pedir una lámpara completamente personalizada?</summary><p>Sí. Puedes compartir una idea y definir con nosotros colores, formas, temática y otros detalles antes de realizar el pedido.</p></details>
+<details><summary>¿Qué materiales utilizan?</summary><p>El proyecto trabaja principalmente con limpiapipas, alambre, luces LED, silicona y materiales de empaque, según el diseño solicitado.</p></details>
+<details><summary>¿Cuánto cuesta una lámpara?</summary><p>La lámpara básica mediana cuesta $35.000 y la lámpara básica personalizada $50.000. Las creaciones con más detalle o tamaño se cotizan según sus características.</p></details>
+<details><summary>¿Puedo enviar una fotografía como referencia?</summary><p>Sí. Una fotografía, dibujo o referencia puede ayudar a entender mejor la idea que quieres convertir en una lámpara.</p></details>
+<details><summary>¿Puedo pedir algo que no aparece en la colección?</summary><p>Sí. La colección funciona como inspiración. La personalización es uno de los principales diferenciadores de Aurora Celestial.</p></details>
+<details><summary>¿Cómo hago mi pedido?</summary><p>A través del formulario de esta página. Cuéntanos tu idea, y te responderemos por correo para conversar sobre detalles, precio y entrega.</p></details>
+<details><summary>¿Existe garantía?</summary><p>El proyecto contempla una garantía de un mes para fallas relacionadas con la luz LED o el funcionamiento, bajo las condiciones acordadas al realizar el pedido.</p></details>
+</div></section>
+
+<section id="pedido"><div class="w">
+<p class="k">Haz tu pedido</p>
+<h2>Cuéntanos qué quieres iluminar.</h2>
+<p>Completa el formulario y se abrirá tu correo con todo listo para enviarnos tu idea a <b>expoart.sena.2026@gmail.com</b>.</p>
+<form id="f">
+<div><label for="n">Tu nombre</label><input id="n" required></div>
+<div><label for="l">¿Qué lámpara te interesa?</label>
+<select id="l">
+<option>Lámpara básica mediana ($35.000)</option>
+<option>Lámpara básica personalizada ($50.000)</option>
+<option>Flor Aurora</option>
+<option>Flor Celestial</option>
+<option>Tu propia flor (personalizada)</option>
+<option>Aún no sé, quiero más información</option>
+</select></div>
+<div><label for="i">Cuéntanos tu idea</label><textarea id="i" rows="4" required></textarea></div>
+<div><label for="c">Tu correo o teléfono de contacto</label><input id="c" required></div>
+<button class="btn" type="submit">Enviar pedido →</button>
+<small>Al enviar, se abrirá tu aplicación de correo con el mensaje ya redactado — solo debes darle enviar.</small>
+</form>
+
+<h2 style="margin-top:44px">Paga como se te haga más fácil.</h2>
+<p>Aceptamos pagos por transferencia y billeteras digitales. Los datos exactos (número, cuenta o QR) te los compartimos al confirmar tu pedido.</p>
+<div class="pay"><span>Nequi</span><span>Efectivo contraentrega</span></div>
+</div></section>
+
+<section class="dark"><div class="w">
+<p class="k">Tu próxima creación</p>
+<h2>¿Qué quieres iluminar?</h2>
+<p>Tu habitación. Tu escritorio. Un recuerdo. Un hobby. Un regalo. Una idea. O simplemente algo que todavía no existe.</p>
+<p style="margin-top:20px"><a class="btn" style="background:var(--ac);color:#2d2a3e" href="#pedido">Crear mi lámpara</a></p>
+</div></section>
+</main>
+
+<footer>
+<img src="logo-full.jpg" alt="Aurora Celestial — donde la luz nace de la imaginación">
+<p>Donde la luz nace de la imaginación.</p>
+<p>© 2026 Aurora Celestial · Lámparas artesanales personalizadas · Hecho con imaginación y luz.</p>
+</footer>
+
+<div class="md" id="lb"><img id="lbi" alt="Vista ampliada de la creación"></div>
+
+<div class="md pop" id="pp"><div class="bx">
+<button class="x" id="px" aria-label="Cerrar">×</button>
+<div id="p1">
+<p class="k">Oferta de bienvenida</p>
+<h3>10% de descuento en tu primera compra</h3>
+<p style="margin:8px 0 14px">Déjanos tus datos y te enviamos tu código de descuento al instante. Sin compromiso.</p>
+<form id="pf" style="margin:0">
+<input placeholder="Nombre" required><input type="email" placeholder="Correo" required><input type="tel" placeholder="Teléfono" required><input placeholder="Dirección" required>
+<button class="btn" type="submit">Quiero mi 10% de descuento</button>
+<small>Solo usamos tus datos para enviarte tu descuento y coordinar tu pedido.</small>
+</form></div>
+<div id="p2" style="display:none">
+<h3>¡Listo! Este es tu código:</h3>
+<p class="code">AURORA20</p>
+<p>Preséntalo al hacer tu pedido por el formulario o por correo.</p>
+</div>
+</div></div>
+<button id="ofr">✦ 10% de descuento en tu primera lámpara</button>
+
+<script>
+var $=function(s){return document.querySelector(s)};
+$('#mb').onclick=function(){$('#nv').classList.toggle('on')};
+document.querySelectorAll('nav a').forEach(function(a){a.onclick=function(){$('#nv').classList.remove('on')}});
+document.querySelectorAll('[data-l]').forEach(function(a){a.onclick=function(){$('#l').value=a.getAttribute('data-l')}});
+document.querySelectorAll('.trio img,.gal img').forEach(function(im){im.onclick=function(){$('#lbi').src=im.src;$('#lb').classList.add('on')}});
+$('#lb').onclick=function(){this.classList.remove('on')};
+$('#f').onsubmit=function(e){
+e.preventDefault();
+var b='Nombre: '+$('#n').value+'\nLámpara: '+$('#l').value+'\nIdea: '+$('#i').value+'\nContacto: '+$('#c').value;
+location.href='mailto:expoart.sena.2026@gmail.com?subject='+encodeURIComponent('Pedido Aurora Celestial')+'&body='+encodeURIComponent(b);
+};
+function op(){$('#pp').classList.add('on')}
+function cl(){$('#pp').classList.remove('on')}
+$('#px').onclick=cl;$('#ofr').onclick=op;
+$('#pf').onsubmit=function(e){e.preventDefault();$('#p1').style.display='none';$('#p2').style.display='block'};
+setTimeout(function(){try{if(!sessionStorage.getItem('ac_pop')){op();sessionStorage.setItem('ac_pop','1')}}catch(e){op()}},4000);
+</script>
+</body>
+</html>
